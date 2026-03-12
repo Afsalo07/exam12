@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/Afsalo07/exam12.git'
+                git branch: 'main', url: 'https://github.com/Afsalo07/exam12.git'
             }
         }
 
         stage('Show File') {
             steps {
-                sh 'cat age.html'
+                bat 'type age.html'
             }
         }
     }
